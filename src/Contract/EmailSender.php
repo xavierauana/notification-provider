@@ -34,7 +34,7 @@ interface EmailSender
 
     public function setWebhookParser(WebhookParser $webhookParser): void;
 
-    public function enableSendBox(): void;
+    public function enableSendBox(): EmailSender;
 
 
     /**

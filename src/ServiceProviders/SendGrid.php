@@ -148,11 +148,13 @@ class SendGrid implements EmailSender
     }
 
 
-    public function enableSendBox(): void {
+    public function enableSendBox(): EmailSender {
         if ($this->settings === null) {
             $this->settings = new MailSettings();
         }
         $this->settings->setSandBoxMode(new SandBoxMode(true));
+
+        return $this;
     }
 
     /**
