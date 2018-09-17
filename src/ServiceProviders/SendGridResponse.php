@@ -29,7 +29,7 @@ class SendGridResponse implements CommunicationResponseInterface
 
 
     public function isOkay(): bool {
-        return $this->response->statusCode() === 202;
+        return $this->response->statusCode() >= 200 and $this->response->statusCode() <= 299;
     }
 
     /**

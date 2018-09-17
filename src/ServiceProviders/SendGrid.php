@@ -152,8 +152,12 @@ class SendGrid implements EmailSender
         if ($this->settings === null) {
             $this->settings = new MailSettings();
         }
-        $this->settings->setSandBoxMode(new SandBoxMode(true));
+        $sandboxMode = new SandBoxMode();
 
+        $sandboxMode->setEnable(true);
+
+        $this->settings->setSandBoxMode($sandboxMode);
+        
         return $this;
     }
 
