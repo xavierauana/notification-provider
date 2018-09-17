@@ -1,0 +1,24 @@
+{
+  "name": "anacreation/notification-provider",
+  "description": "Notification Providers",
+  "type": "lib",
+  "license": "MIT",
+  "authors": [
+	{
+	  "name": "Xavier Au",
+	  "email": "xavier.au@anacreation.com"
+	}
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+	"psr-4": {
+	  "Anacreation\\Notification\\Provider\\": "src/"
+	}
+  },
+  "require": {
+	"php": ">=7.1.0",
+	"nexmo/client": "^1.2",
+	"sendgrid/sendgrid": "~6.0"
+  }
+}
+
